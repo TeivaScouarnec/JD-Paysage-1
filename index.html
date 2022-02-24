@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>JD Pasyage</title>
 </head>
 <body>
     <header>
         <div class="Menu-desktop">
-            <a href="">Accueil</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
+            <a href="#accueil"><strong>Accueil</strong></a>
+            <a href="#services"><strong>Services</strong></a>
+            <a href="#contact"><strong>Contact</strong></a>
         </div>
     </header>
 
-    <div class="Banner">
-        <img src="assets/img/banner.jpg" alt="">
+    <div class="Banner" id="accueil">
+        <div class="Banner-img"><img src="assets/img/JD paysage.png" alt=""></div>
     </div>
 
     <section class="About">
-        <div>
+        <div class="About-text">
             <p>JD PAYSAGE est une jeune entreprise agile et dynamique, 
                 basée à Locoal-Mendon et qui intervient principalement sur 
                 le pays d'Auray.
@@ -33,24 +33,26 @@
         </div>
     </section>
 
-    <section class="Services">
+    <section class="Services" id="services">
         <div class="Services-div">
             <h1>Les services proposés par 
                 notre entreprise</h1>
             <div class="panel-service">
-                <section>
-                    <img src="" alt="">
-                    <h2>Entretien Jardin</h2>
-                    <p>Besoin de tendre la pelouse? D’entrenir votre cours? 
-                        De desherber ou tout autre travaux à la demande?</p>
-                    <a href="">Faire un devis</a>
+                <section class="panel" id="Entretien">
+                    <div class="text">
+                        <h2>Entretien Jardin</h2>
+                        <p>Besoin de tendre la pelouse? D’entrenir votre cours? 
+                            De desherber ou tout autre travaux à la demande?</p>
+                    </div>
+                    <a href="#contact"><strong> Faire un devis</strong></a>
                 </section>
-                <section>
-                    <img src="" alt="">
-                    <h2>Aménagement de jardin</h2>
-                    <p>Besoin d’une création dans votre jardin? 
-                        De faire de la petite maçonnerie chez vous?</p>
-                    <a href="">Faire un devis</a>
+                <section class="panel" id="Amenagement" >
+                    <div class="text">
+                        <h2>Aménagement de jardin</h2>
+                        <p>Besoin d’une création dans votre jardin? 
+                            De faire de la petite maçonnerie chez vous?</p>
+                    </div>
+                    <a href="#contact"><strong> Faire un devis</strong></a>
                 </section>
             </div>
         </div>
@@ -58,29 +60,57 @@
 
     <section class="portfolio">
         <h1>Portfolio</h1>
+        <div>
+            <img src="assets/portfolio/271186021_343654364049883_5412786828522610868_n.jpg" alt="">
+            <img src="assets/portfolio/271326453_1069487306956331_8132248491915385987_n.jpg" alt="">
+            <img src="assets/portfolio/271361573_517984476128481_2667003412470515476_n.jpg" alt="">
+        </div>
+        <div>
+            <img src="assets/portfolio/271440163_1058553011379261_3439709430759032781_n.jpg" alt="">
+            <img src="assets/portfolio/272023293_308029541279061_3615585350701715615_n.jpg" alt="">
+            <img src="assets/portfolio/271418423_472313964510987_1425801383614740599_n.jpg" alt="">
+        </div>
     </section>
 
-    <section class="Contact">
+    <section class="Contact" id="contact">
         <div class="formulaire">
             <h1>Contact</h1>
             <p>Vous avez une question? Besoin d’un devis?
-                N’hésitez plus à nous contactez</p> 
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51146.40746856784!2d-3.0221836928088948!3d47.64455792057865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481014410181de55%3A0x40ca5cd36e2c9a0!2s56400%20Auray%2C%20France!5e0!3m2!1sfr!2sbe!4v1643646018857!5m2!1sfr!2sbe" allowfullscreen="" loading="lazy"></iframe>
-            <h3>Joseph.debethune56@gmail.com | 07 81 99 73 38</h3>
-            <form action="">
-                <input type="text" id="society" name="society" value="Société"><br>
-                <input type="text" id="lname" name="lname" value="Prénom*"><br>
-                <input type="text" id="fname" name="fname" value="Nom*"><br>
-                <input type="text" id="sujet" name= "sujet" value="Sujet*"><br>
-                <textarea id="ftext" name="ftext">Text</textarea><br>
-                <input type="submit" value="Envoyer">
+                N’hésitez plus à nous contactez</p>
+            <div class="formulaire-coor"> 
+                <a href="mailto:Joseph.debethune56@gmail.com"><h3>✉️Joseph.debethune56@gmail.com</h3></a>
+                <a href="tel:+07.81.99.73.38"><h3>📞07 81 99 73 38</h3></a>
+            </div>
+            
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51146.40746856784!2d-3.0221836928088948!3d47.64455792057865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481014410181de55%3A0x40ca5cd36e2c9a0!2s56400%20Auray%2C%20France!5e0!3m2!1sfr!2sbe!4v1643646018857!5m2!1sfr!2sbe" allowfullscreen="" loading="lazy"></iframe>
+            
+            <form action="assets/php/traitement.php" method="post">
+                <label for="Society"><strong>Société:</strong></label>
+                <input type="text" id="society" name="society"><br>
+                <label for="email"><strong>Email*:</strong></label>
+                <input type="email" id="email" name="email"><br>
+                <label for="telephone"><strong>Téléphone*:</strong></label>
+                <input type="tel" id="telephone" name="telephone"><br>
+                <label for="lname"><strong>Prénom*:</strong></label>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="fname"><strong>Nom*:</strong></label>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="sujet"><strong>Sujet*:</strong></label>
+                <input type="text" id="sujet" name= "sujet"><br>
+                <label for="ftext"><strong>Texte*:</strong></label>
+                <textarea id="ftext" name="ftext"></textarea><br>
+                <label for="captcha"><strong>Combien font 45 + 3 + 2?*</strong></label>
+                <input type="text" maxlength="2" name="captcha" id="captcha">
+                <input type="submit" value="Envoyer" id="send">
             </form> 
+            <p id="obligatory">(*)Obligatoire</p>
+            
         </div>
     </section>
 
     <footer>
         <div>
-            <h3>Joseph.debethune56@gmail.com | 07 81 99 73 38</h3>
+            Made by Teiva Scouarnec
         </div>
     </footer>
 </body>
