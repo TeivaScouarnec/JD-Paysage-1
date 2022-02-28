@@ -42,7 +42,7 @@
             exit
         };
 
-        $to = "teivascouarnec@gmail.com";
+        $to = "Joseph.debethune56@gmail.com";
         $subject = "Nouveau message provenant de JDPaysage: ".$sujet;
         //La concaténation se fait avec . et pas un + parce que... PHP
         $message = "Société: ".$society."\nNom: ".$lname."\nPrénom: ".$fname. 

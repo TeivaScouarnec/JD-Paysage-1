@@ -269,6 +269,18 @@ footer {
     background-color: white;
 }
 
+footer h1, footer a {
+    text-decoration: none;
+}
+
+footer a {
+    color: rgb(90, 90, 90);
+}
+
+footer a:hover {
+    color: rgb(95, 45, 45);
+}
+
 footer div {
     margin: 0 auto 0 auto;
     text-align: center;
